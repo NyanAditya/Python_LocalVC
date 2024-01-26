@@ -1,0 +1,14 @@
+x = 29.0
+y = 13
+z = 2
+p = 0.5
+q = 12.79
+s = 0.0
+a = ''
+b = ' '
+c = 'great'
+d = 'Great'
+e = 'GREAT'
+f = u'Great'
+g = u'GREAT'
+h = u'great'

@@ -1,0 +1,5 @@
+myfile = open("Myfile")
+x = myfile.read()
+y = x.count('the')
+print(y)
+myfile.close()
