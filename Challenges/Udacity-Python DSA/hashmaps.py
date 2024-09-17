@@ -7,20 +7,24 @@ class HashTable(object):
         self.table = [None]*10000
 
     def store(self, string):
-        """Input a string that's stored in 
-        the table."""
-        pass
+        string_hash_code = self.calculate_hash_value(string)
+        self.table[string_hash_code] = string
+        
 
     def lookup(self, string):
-        """Return the hash value if the
-        string is already in the table.
-        Return -1 otherwise."""
-        return -1
+        string_hash_code = self.calculate_hash_value(string)
+        
+        if self.table[string_hash_code] != None:
+            return string_hash_code
 
+        else:
+            return -1
+        
+        
+        
     def calculate_hash_value(self, string):
-        """Helper function to calulate a
-        hash value from a string."""
-        return -1
+        hash_code = int(str(ord(string[0])) + str(ord(string[1])))
+        return hash_code
     
 # Setup
 hash_table = HashTable()
