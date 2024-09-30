@@ -6,6 +6,7 @@ def decorator(func):
         return result
     return wrapper
 
+
 class Sample:
     @decorator
     def hello(self):
@@ -16,3 +17,4 @@ class Sample:
 if __name__ == "__main__":
     sample = Sample()
     sample.hello()
+    
