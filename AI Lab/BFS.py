@@ -71,7 +71,6 @@ class Graph:
         return None  # No path exists
 
 if __name__ == "__main__":
-    # Create a graph
     g = Graph()
     g.add_edge(0, 1)
     g.add_edge(0, 2)
