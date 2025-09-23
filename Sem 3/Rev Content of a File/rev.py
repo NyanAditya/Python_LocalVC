@@ -1,4 +1,6 @@
-with open("./textfile.txt", "w+") as file:
+file_loc = "D:\\SelfRepoClone\\Python_LocalVC\\Sem 3\\Rev Content of a File\\textfile.txt"
+
+with open(file_loc, "w+") as file:
     content = file.read()
     
     print(content)
