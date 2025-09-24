@@ -1,0 +1,37 @@
+HANGMAN GAME RULES
+
+OBJECTIVE:
+Guess the hidden word by suggesting letters one at a time before the drawing of a hangman is completed.
+
+SETUP:
+1. One player (or computer) thinks of a word and draws blank spaces representing each letter
+2. A gallows is drawn with an empty noose
+3. The guesser has 6 wrong guesses before losing
+
+GAMEPLAY:
+1. The guesser suggests a letter
+2. If the letter appears in the word:
+    - All instances of that letter are revealed in their correct positions
+    - The guesser continues with another guess
+3. If the letter does not appear in the word:
+    - A body part is added to the hangman drawing
+    - The incorrect letter is recorded as already guessed
+4. The guesser cannot repeat previously guessed letters
+
+HANGMAN DRAWING PROGRESSION (6 wrong guesses):
+1. Head
+2. Body
+3. Left arm
+4. Right arm
+5. Left leg
+6. Right leg
+
+WINNING CONDITIONS:
+- GUESSER WINS: All letters in the word are revealed before the drawing is complete
+- GUESSER LOSES: The hangman drawing is completed (6 wrong guesses) before the word is guessed
+
+ADDITIONAL RULES:
+- Only letters A-Z are allowed (no numbers or special characters)
+- Words should be common nouns, avoiding proper names or abbreviations
+- The word length should be displayed to the guesser
+- Case does not matter (A = a)
