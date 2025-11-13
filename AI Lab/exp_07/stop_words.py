@@ -5,7 +5,7 @@ from nltk.tokenize import word_tokenize
 nltk.download('punkt', quiet=True)
 nltk.download('stopwords', quiet=True)
 
-with open('input.txt', 'r') as file:
+with open('D:/SelfRepoClone/Python_LocalVC/AI Lab/exp_07/input.txt', 'r') as file:
     text = file.read()
 
 words = word_tokenize(text)
