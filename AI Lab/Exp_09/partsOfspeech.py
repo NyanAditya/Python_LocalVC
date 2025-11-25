@@ -1,16 +1,29 @@
 import nltk
-from nltk import word_tokenize, pos_tag
+from nltk.tokenize import word_tokenize
 
-nltk.download('punkt', quiet=True)
-nltk.download('averaged_perceptron_tagger', quiet=True)
-nltk.download('punkt_tab', quiet=True)
+# Download necessary NLTK data (run once)
+try:
+    nltk.data.find('tokenizers/punkt')
+    nltk.data.find('taggers/averaged_perceptron_tagger')
+except LookupError:
+    nltk.download('punkt')
+    nltk.download('averaged_perceptron_tagger')
 
-sentence = "The quick brown fox jumps over the lazy dog"
+def pos_tagging(sentence):
+    # Tokenize the sentence into words
+    words = word_tokenize(sentence)
+    
+    # Perform POS tagging
+    tagged_words = nltk.pos_tag(words)
+    
+    return tagged_words
 
-tokens = word_tokenize(sentence)
-pos_tags = pos_tag(tokens)
-
-print("Sentence:", sentence)
-print("\nPOS Tags:")
-for word, tag in pos_tags:
-    print(f"{word}: {tag}")
+if __name__ == "__main__":
+    text = "The quick brown fox jumps over the lazy dog"
+    print(f"Original Sentence: {text}")
+    
+    tags = pos_tagging(text)
+    
+    print("\nPOS Tags:")
+    for word, tag in tags:
+        print(f"{word}: {tag}")
